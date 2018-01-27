@@ -43,7 +43,7 @@
 
                         <!-- logo begin -->
                         <div id="logo" class="pull-left">
-                            <a href="index.html">
+                            <a href="<?php echo get_home_url()?>">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" alt="" class="logo">
                             </a>
                         </div>
