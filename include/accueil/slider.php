@@ -1,10 +1,11 @@
+<!-- slider -->
 <div id="slider">
     <!-- revolution slider begin -->
     <div class="fullwidthbanner-container">
         <div id="revolution-slider">
             <ul>
                 <?php
-                $images = get_field('accueil_slider',121);
+                $images = get_field('accueil_slider');
                 $size = 'full'; // (thumbnail, medium, large, full or custom size)
 
                 if ($images): ?>
