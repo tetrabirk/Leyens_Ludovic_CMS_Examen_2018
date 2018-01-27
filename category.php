@@ -7,9 +7,9 @@ get_header();
 ?>
 
 
-    <?php include_once 'include/categories/titre.php' ?>
+    <?php include_once 'include/category/titre.php' ?>
 
-<?php include_once 'include/categories/articles.php'?>
+<?php include_once 'include/category/articles.php' ?>
 
 
 
