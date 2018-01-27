@@ -78,7 +78,7 @@
 
                             <div class="header-contact">
                                 <ul class="clearfix">
-                                    <li class="phone"><i class="fa fa-phone"></i> <span>0112-826-2789</span></li>
+                                    <li class="phone"><i class="fa fa-phone"></i> <span><?php the_field('header_telephone', 'option'); ?></span></li>
                                     <li class="border-line">|</li>
                                 </ul>
                             </div>
