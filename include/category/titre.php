@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <h1><?php the_title()?></h1>
                 <ul class="breadcrumbs">
-                    <li><a href="<?php echo get_home_url()?>"><?php _e('Home', 'wp-theme-base-translate'); ?>Home</a></li>
+                    <li><a href="<?php echo get_home_url()?>"><?php _e('Home', 'wp-theme-base-translate'); ?></a></li>
                     <b>/</b>
                     <li class="active"><?php the_title()?></li>
                 </ul>
