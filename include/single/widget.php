@@ -1,7 +1,8 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Ludovic
- * Date: 27/01/2018
- * Time: 19:45
- */
+<div class="col-md-3">
+    <div class="main-sidebar">
+        <aside class="widget widget_text">
+            <?php dynamic_sidebar( 'widget_article' ); ?>
+
+        </aside>
+    </div>
+</div>
