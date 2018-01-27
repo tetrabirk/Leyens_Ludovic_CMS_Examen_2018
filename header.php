@@ -61,26 +61,15 @@
 
                         <!-- desktop menu begin -->
                         <nav id="desktop-menu" class="site-desktop-menu hidden-xs hidden-sm">
-                            <ul class="clearfix">
-                                <li class="active">
-                                    <a href="accueil.html">Accueil</a>
-                                </li>
-                                <li>
-                                    <a href="page.html">A propos</a>
-                                </li>
-                                <li>
-                                    <a href="categories.html">Blog</a>
-                                    <ul>
-                                        <li><a href="categories.html">Finance</a></li>
-                                        <li><a href="categories.html">Bilan</a></li>
-                                        <li><a href="categories.html">Conseils</a></li>
-                                        <li><a href="categories.html">Juridique</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                            </ul>
+                            <?php
+                            $args = array(
+                                'menu' => 'menu_haut',
+                                'container' => 'ul',
+                                'menu_class'=> 'clearfix'
+
+                            );
+                            wp_nav_menu($args);
+                            ?>
                         </nav>
                         <!-- desktop menu close -->
 
