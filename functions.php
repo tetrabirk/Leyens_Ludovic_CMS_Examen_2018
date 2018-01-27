@@ -27,6 +27,17 @@ function wp_base_theme_widgets_init() {
         'name'          => __( 'bloc_footer_1', 'wp-theme-base-translate' ),
         'id'            => 'bloc_footer_1',
         'description'   => __( 'bloc footer avec contact', 'wp-theme-base-translate' ),
+        'before_widget' => '',
+        'after_widget' => '',
+    ) );
+    register_sidebar( array(
+        'name'          => __( 'widget_article', 'wp-theme-base-translate' ),
+        'id'            => 'widget_article',
+        'description'   => __( 'widget_article_about', 'wp-theme-base-translate' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3><div class="tiny-border"></div>',
     ) );
 }
 
@@ -47,4 +58,10 @@ add_action( 'after_setup_theme', 'pdw_theme_setup' );
 function pdw_theme_setup(){
     load_theme_textdomain( 'wp-theme-base-translate', get_template_directory() . '/languages' );
 }
+
+//limite la longeur des resumer d'article
+function custom_excerpt_length( $length ) {
+    return 15;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
