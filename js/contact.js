@@ -1,16 +1,25 @@
 (function($) { "use strict";
-    
+
     //set your google maps parameters
 
     $(document).ready(function(){
-        var latitude = -37.817,
-            longitude = 144.962,
+
+        var varlat = parseFloat((document.getElementById("dom-latitude")).textContent);
+        var varlon = parseFloat((document.getElementById("dom-longitude")).textContent);
+        var varinfobox = (document.getElementById("dom-infobox").textContent);
+        var varicon = (document.getElementById("dom-icon").textContent);
+
+        console.log(varlat);
+        console.log(varlon);
+
+        var latitude = varlat,
+            longitude = varlon,
             map_zoom = 14;
 
         var locations = [
-            ['<div class="infobox"><span>WE ARE COMPACT<span></div>', latitude, longitude, 2]
+            ['<div class="infobox"><span>'+varinfobox+'<span></div>', latitude, longitude, 2]
         ];
-    
+
         var map = new google.maps.Map(document.getElementById('map-canvas'), {
             zoom: map_zoom,
             scrollwheel: false,
@@ -197,19 +206,19 @@
             center: new google.maps.LatLng(latitude, longitude),
           mapTypeId: google.maps.MapTypeId.ROADMAP
         });
-    
+
         var infowindow = new google.maps.InfoWindow();
-    
+
         var marker, i;
-    
-        for (i = 0; i < locations.length; i++) {  
-      
-            marker = new google.maps.Marker({ 
-                position: new google.maps.LatLng(locations[i][1], locations[i][2]), 
+
+        for (i = 0; i < locations.length; i++) {
+
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                 map: map,
-                icon: 'images/cd-icon-location.png'
+                icon: varicon
             });
-        
+
           google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
               infowindow.setContent(locations[i][0]);
@@ -217,12 +226,12 @@
             }
           })(marker, i));
         }
-        
+
     });
 
-})(jQuery); 
- 
- 
+})(jQuery);
+
+
  
  
  
