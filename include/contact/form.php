@@ -1,7 +1,1 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Ludovic
- * Date: 28/01/2018
- * Time: 12:24
- */
+<?php the_field('contact_2eme_section_wysiwyg')?>
