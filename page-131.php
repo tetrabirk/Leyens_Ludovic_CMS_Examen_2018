@@ -1,44 +1,43 @@
-<!-- content begin -->
-<div id="content" class="no-padding">
+<?php
+/**
+ * Template Name: Contact
+ *
+ */
+get_header();
+?>
+    <!-- content begin -->
+    <div id="content" class="no-padding">
 
-    <!-- section begin -->
-    <section id="section-contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="intro-text text-center">
-                        <h2>Contact Us</h2>
-                        <p>Send us an email vulputate bibendum justo sed, tincidunt quisque <br> dictum eget dolor vel maximus.</p>
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+
+                <!-- section begin -->
+                <section id="section-contact">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+
+                                <?php include_once 'include/contact/titre.php' ?>
+                                <?php include_once 'include/contact/form.php' ?>
+                            </div>
+                        </div>
                     </div>
-                    <form action="" class="wpcf7-form">
-                        <div class="col-one-third">
-                            <input type="text" placeholder="Your Name">
-                        </div>
-                        <div class="col-one-third margin-one-third">
-                            <input type="email" placeholder="Your Email">
-                        </div>
-                        <div class="col-one-third">
-                            <input type="text" placeholder="Your Phone">
-                        </div>
-                        <div class="col-full"><textarea placeholder="Your Message"></textarea></div>
-                        <div class="clearfix"></div>
-                        <div class="text-center">
-                            <div class="divider-single"></div>
-                            <button class="btn btn-primary btn-big">Send Email</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- section close -->
+                </section>
+                <!-- section close -->
 
-    <!-- section gmap begin -->
-    <section id="section-gmap" class="no-padding">
-        <div id="map-canvas" class="map-canvas"></div>
-    </section>
-    <!-- section gmap close -->
+                <?php include_once 'include/contact/map.php' ?>
 
-</div>
-<!-- content close -->
-   
+            <?php endwhile; ?>
+        <?php endif; ?>
+
+    </div>
+    <!-- content close -->
+
+    <!--CONTACT-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSSiBIjO2oLHUPb7LL0FChkEYE1FC8ytE"></script>
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/contact.js"></script>
+
+
+<?php
+get_footer();
+?>
