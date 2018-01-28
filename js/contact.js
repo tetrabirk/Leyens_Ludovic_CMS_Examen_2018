@@ -9,9 +9,6 @@
         var varinfobox = (document.getElementById("dom-infobox").textContent);
         var varicon = (document.getElementById("dom-icon").textContent);
 
-        console.log(varlat);
-        console.log(varlon);
-
         var latitude = varlat,
             longitude = varlon,
             map_zoom = 14;
