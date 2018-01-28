@@ -103,11 +103,16 @@
 
 <!-- SLIDER REVOLUTION SCRIPTS  -->
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/rs-plugin/js/jquery.themepunch.revolution.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri() ?>/js/revslider-custom.js"></script>
-
+<!-- ABOUT -->
 <script src="<?php echo get_stylesheet_directory_uri() ?>/js/about.js"></script>
+
+
+
 <?php wp_footer();?>
+
+
 
 </body>
 </html>
