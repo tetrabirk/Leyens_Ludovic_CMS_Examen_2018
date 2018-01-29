@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Compact - Multipurpose Corporate Business Website Template</title>
+    <title><?php _e('Compact - Multipurpose Corporate Business Website Template', 'wp-theme-base-translate'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -107,7 +107,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <form role="search" method="get" class="search-form" action="">
-                        <input type="search" class="search-field" placeholder="Search here..." value="" title=""/>
+                        <input type="search" class="search-field" placeholder="<?php the_field('Search here...', 'option'); ?>" value="" title=""/>
                         <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
                     </form>
                 </div>

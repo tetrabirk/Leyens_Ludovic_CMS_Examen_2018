@@ -50,10 +50,13 @@
             <!-- pagination begin -->
             <div class="pagination-ourter text-center">
                 <ul class="pagination">
-                    <li><a class="prev page-numbers" href="<?php previous_posts() ?>"><i
-                                    class="fa fa-angle-left"></i></a></li>
-                    <li><a class="next page-numbers" href="<?php next_posts() ?>"><i class="fa fa-angle-right"></i></a>
-                    </li>
+                    <li><a class="prev page-numbers" href="<?php previous_posts() ?>"><i class="fa fa-angle-left"></i></a></li>
+
+                    <?php if (get_next_posts_link(__('Newer Entries &raquo;'))) { ?>
+                        <li><a class="next page-numbers" href="<?php next_posts() ?>"><i class="fa fa-angle-right"></i></a>
+                    <?php }else{ ?>
+                        <li><a class="next page-numbers" href="#"><i class="fa fa-angle-right"></i></a></li>
+                    <?php } ?>
                 </ul>
 
             </div>

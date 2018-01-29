@@ -34,8 +34,7 @@
                            class="btn-intro-video"><i class="fa fa-play"></i></a>
                     </div>
                     <div id="thevideo" style="display:none">
-                        <iframe id="someFrame" width="750" height="422" src="" frameborder="0"
-                                allowfullscreen></iframe>
+                        <iframe id="someFrame" width="750" height="422" src="" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

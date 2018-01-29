@@ -8,8 +8,8 @@
                     <div class="latest-projects-intro">
                         <h2 class="box-title"><?php _e('Derniers articles', 'wp-theme-base-translate'); ?></h2>
                         <div class="tiny-border-light"></div>
-                        <p>Pellentesque gravida diam orci, vitae venenatis est eleifend sed. Proin non pretium
-                            turpis</p>
+                        <p><?php _e("Pellentesque gravida diam orci, vitae venenatis est eleifend sed. Proin non pretium
+                            turpis", 'wp-theme-base-translate'); ?></p>
                     </div>
                     <div class="latest-projects-wrapper">
                         <div id="latest-projects-items" class="latest-projects-items">
@@ -35,7 +35,7 @@
                                     </p>
 
                                     <div class="folio-buttons">
-                                        <a href="<?php the_field('article_2eme_section_image'); ?>" title="Plan For Your Bussiness"
+                                        <a href="<?php the_field('article_2eme_section_image'); ?>" title="<?php the_title(); ?>"
                                            class="folio"><i class="fa fa-search"></i></a>
                                         <a href="#"><i class="fa fa-link"></i></a>
                                     </div>
